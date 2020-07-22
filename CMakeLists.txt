@@ -52,3 +52,9 @@ add_subdirectory(catch2)
 
 # netlibcc_core
 add_subdirectory(netlibcc/core)
+
+# netlibcc_base
+add_subdirectory(netlibcc/base)
+
+# netlibcc_net
+add_subdirectory(netlibcc/net)

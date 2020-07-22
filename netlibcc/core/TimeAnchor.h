@@ -35,6 +35,18 @@ private:
     int64_t stamp_;
 };
 
+inline bool operator<(TimeAnchor lhs, TimeAnchor rhs) {
+    return lhs.timeMicro() < rhs.timeMicro();
+}
+
+inline bool operator==(TimeAnchor lhs, TimeAnchor rhs) {
+    return lhs.timeMicro() == rhs.timeMicro();
+}
+
+inline bool operator<=(TimeAnchor lhs, TimeAnchor rhs) {
+    return lhs == rhs || lhs < rhs;
+}
+
 inline TimeAnchor operator-(TimeAnchor lhs, TimeAnchor rhs) {
     return TimeAnchor(lhs.timeMicro() - rhs.timeMicro());
 }

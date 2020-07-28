@@ -22,7 +22,7 @@ can be integrated together, which is also the primary motivation of this project
 - Efficient timer manager implemented by binary heap structure without redundant memorization
 - Unified event source management by using timerfd and eventfd
 - The different accept strategies of Acceptor
-- The connection close strategy (TCP-Half close, passive close)
+- The connection close strategy (TCP Half-close, passive close)
 - The adjustment strategy of events of interest according to epoll working mode (avoid busy loop)
 - More efficient IO Buffer space adjustment strategy to avoid allocating space frequently
 - The idea of functional programming

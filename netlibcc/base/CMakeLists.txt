@@ -9,6 +9,7 @@ if(NOT HAVE_ACCEPT4)
 endif()
 
 add_library(${PROJECT_NAME}
+    Buffer.cc
     InetAddr.cc
     Socket.cc
     SockOps.cc

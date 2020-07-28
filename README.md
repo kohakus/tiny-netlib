@@ -29,9 +29,9 @@ can be integrated together, which is also the primary motivation of this project
 
 **Rough performance tests**
 
-The tests are conduct on a single PC with 8 cores: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz.
+The tests are conduct on a single PC with 4 cores: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz.
 
-During test phase, the HTTP server is seen as working on 4 cores by setting CPU affinity.
+During test phase, the HTTP server is seen as working on 4 logical cores by setting CPU affinity.
 
 Some construction infos: Linux version 4.19.133-1-MANJARO (builduser@ba15) (gcc version 10.1.0 (GCC)).
 

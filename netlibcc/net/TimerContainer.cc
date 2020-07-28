@@ -103,7 +103,7 @@ TimerContainer::TimerContainer(EventLoop* loop)
 
 // dtor
 TimerContainer::~TimerContainer() {
-    timerfd_channel_.disabelAll();
+    timerfd_channel_.disableAll();
     timerfd_channel_.remove();
     ::close(timerfd_);
     for (Timer* timer : timer_list_) {

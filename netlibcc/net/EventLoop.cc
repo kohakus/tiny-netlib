@@ -67,7 +67,7 @@ EventLoop::~EventLoop() {
     LOG_DEBUG << "EventLoop " << (void*)this << " of thread " << thread_id_
               << " destructs in thread " << netlibcc::thisthread::tid();
 
-    wakeup_channel_->disabelAll();
+    wakeup_channel_->disableAll();
     wakeup_channel_->remove();
     ::close(wakeupfd_);
     t_loopInThisThread = nullptr;

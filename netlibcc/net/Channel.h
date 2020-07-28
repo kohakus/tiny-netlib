@@ -82,7 +82,7 @@ public:
         update();
     }
 
-    void disabelAll() {
+    void disableAll() {
         sevents_ = kNoneEvent;
         update();
     }

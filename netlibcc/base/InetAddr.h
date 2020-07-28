@@ -35,8 +35,6 @@ namespace net {
 // class of IPv4 socket address
 class InetAddr {
 public:
-    InetAddr() = default;
-
     // in this case we want to construct an endpoint directly
     // from a given port and ip address "X.X.X.X"
     InetAddr(StringArg ip_str, uint16_t port);

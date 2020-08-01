@@ -29,9 +29,7 @@ can be integrated together, which is also the primary motivation of this project
 
 **Rough performance tests**
 
-The tests are conduct on a single PC with 4 cores: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz.
-
-During test phase, the HTTP server is seen as working on 4 logical cores by setting CPU affinity.
+The tests are conducted on a single PC with 4 cores: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz.
 
 Some construction infos: Linux version 4.19.133-1-MANJARO (builduser@ba15) (gcc version 10.1.0 (GCC)).
 
@@ -48,15 +46,20 @@ Use optimized build (-O2).
 
   (* in the last row: to match the format of void* type in muduo, the inner {fmt} pointer format is not used directly, thus the value 0.036 is not precise. It actually involves multiple formatting operations)
 
-- Net library throughput performance test by Apache Bench, using the same implementation of server
+- Net library throughput performance test by [wrk](https://github.com/wg/wrk), test HTTP server, data is stored in memory
 
-![](./tests/single_short.png)
+  |        |          CPU info of the machine          | Memory | Ethernet speed |          OS          |
+  | :----: | :---------------------------------------: | :----: | :------------: | :------------------: |
+  | Server | Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz |  16GB  |  1000 Mbit/s   | Manjaro 20.0.3 Lysia |
+  | Client |  Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz  |  8GB   |  1000 Mbit/s   | Manjaro 20.0.3 Lysia |
 
-![](./tests/single_long.png)
+  Test configurations:
 
-![](./tests/multi_short.png)
+  `wrk -H "Connection: Close" -t4 -c1000 -d60s` (for short connection)
 
-![](./tests/multi_long.png)
+  `wrk -t4 -c1000 -d60s` (for long connection)
+
+  ![](./tests/bench.png)
 
 **Main references:**
 

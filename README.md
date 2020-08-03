@@ -35,7 +35,7 @@ Some construction infos: Linux version 4.19.133-1-MANJARO (builduser@ba15) (gcc 
 
 Use optimized build (-O2).
 
-- Log stream formatting (mean) time of various types in seconds, one million times
+- Log stream formatting time of various types in seconds, one million times
 
   |              |  int  |  double   | int64_t | void*  |
   | :----------: | :---: | :-------: | :-----: | :----: |

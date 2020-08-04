@@ -55,10 +55,12 @@ Use optimized build (-O2).
 
   Test configurations:
 
-  `wrk -H "Connection: Close" -t4 -c1000 -d60s` (for short connection)
+  `wrk -H "Connection: close" -t4 -c1000 -d60s` (for short connection)
 
   `wrk -t4 -c1000 -d60s` (for long connection)
 
+  The following picture shows the long connection test results.
+  
   ![](./tests/bench.png)
 
 **Main references:**
